@@ -12,8 +12,10 @@ while (ch <= 57)
 {
 	putchar(ch);
 	if (ch != '9')
+	{
 	putchar(',');
 	putchar(' ');
+	}
 	ch++;
 }
 putchar('\n');
