@@ -24,7 +24,7 @@ if (n < 0 || n > 15)
 	return;
 if (n == 0)
 {
-	_putchar('0');
+	_putchar('0'), _putchar('\n');
 return;
 }
 while (i <= n)
