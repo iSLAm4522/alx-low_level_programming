@@ -22,11 +22,14 @@ int i = 0, j;
 
 if (n < 0 || n > 15)
 	return;
-while (i <= n)
+if (n == 0)
 {
 	_putchar('0');
-	_putchar(',');
-	_putchar(' ');
+return;
+}
+while (i <= n)
+{
+	_putchar('0'), _putchar(','), _putchar(' ');
 	j = 1;
 	while (j <= n)
 	{
@@ -34,9 +37,7 @@ while (i <= n)
 
 	if (product < 10)
 	{
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(product + '0');
+		_putchar(' '), _putchar(' '), _putchar(product + '0');
 	}
 	else if (product < 100)
 	{
@@ -50,8 +51,7 @@ while (i <= n)
 	}
 	if (j != n)
 	{
-		_putchar(',');
-		_putchar(' ');
+		_putchar(','), _putchar(' ');
 	}
 	j++;
 	}
