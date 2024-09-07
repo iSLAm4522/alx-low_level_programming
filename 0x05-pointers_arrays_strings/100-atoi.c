@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
 * _atoi - Converts a string to an integer.
 * @str: Pointer to the string to be converted.
@@ -18,7 +19,9 @@ while (str[i])
 	{
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		num = num * 10 + (str[i++] - '0');
+		if (num == (INT_MAX / 10) && str[i] > (INT_MAX % 10))
+		return (sign == 1 ? (INT_MAX) : (INT_MIN));
+	  num = num * 10 + (str[i++] - '0');
 	}
 	break;
 	}
