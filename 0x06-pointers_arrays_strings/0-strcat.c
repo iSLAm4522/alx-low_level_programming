@@ -19,5 +19,6 @@ while (*(src + i))
 	*(dest + len) = *(src + i);
 	len++, i++;
 }
+*(dest + len) = '\0';
 return (dest);
 }
