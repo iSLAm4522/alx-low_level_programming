@@ -45,6 +45,8 @@ char **words;
 if (str == NULL || *str == '\0')
 	return (NULL);
 word_count = count_words(str);
+if (word_count == 0)
+return (NULL);
 words = malloc((word_count + 1) * sizeof(char *));
 if (words == NULL)
 	return (NULL);
